@@ -1,0 +1,27 @@
+<h1>Bouton + & -</h1>
+
+<!--
+  ctrl + k + c => mise en commentaire
+
+  afficher une valeur numérique
+
+  créer 2 bouton
+      1 bouton + (incrémenté la valeur affichée)
+      1 bouton - (décrémenté)
+
+  bonus : Trouver une manière de désactiver le bouton - si la valeur passe sous 0
+  bonus : Trouver une manière de désactiver le bouton + si la valeur passe au dessus de 10
+  La solution se trouve entre le slide 31 et 38
+ -->
+<!------------------------------------------------------------------------------------------->
+<div class="number">
+  <h1>{{myNumber}}</h1>
+</div>
+<div class="boutonNumberMoinsOuPlus">
+<input type="button" value="-" (click)="withdrawOne()"[disabled]="myNumber <= 0">
+<input type="button" value="+" (click)="addOne()" [disabled]="myNumber === 10">
+</div>
+
+<hr/>
+
+

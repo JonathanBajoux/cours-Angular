@@ -1,0 +1,25 @@
+<h1>liste des tâches</h1>
+<ul>
+  <!-- ngfor -- windows🪟 + ; -->
+  <li *ngFor="let tache of taches">
+
+    <!--ngif-->
+    <ng-container *ngIf="tache.complet; else elseblock">
+
+      <span [ngClass]="{'complet' : tache.complet}">{{tache.nom}}</span>
+
+      <span> OK !<input type="checkbox" [(ngModel)]="tache.complet"></span>
+
+    </ng-container>
+
+    <ng-template #elseblock>
+
+      <p [ngClass]="{'non-complet' : !tache.complet}">la tâche n'est pas complete !</p>
+
+      <span>{{tache.nom}}<input type="button" (click)="changerEtat(tache.id)"></span>
+
+    </ng-template>
+  </li>
+</ul>
+
+

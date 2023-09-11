@@ -1,0 +1,34 @@
+<h2> Les Pipes </h2>
+<div class="chapter">
+  <h3>Pipe de base</h3>
+
+    <h4>Pipes sur les strings</h4>
+      <p>base : {{myString}}</p>
+      <p>uppercase : {{myString | uppercase}}</p>
+      <p>uppercase : {{myString | lowercase}}</p>
+      <p>uppercase : {{myString | titlecase}}</p>
+</div>
+<div>
+  <h4>Pipes sur les nombre</h4>
+  <p>base : {{myNumber}}</p>
+  <p>Nombre arrondis :{{myNumber | number : ' 1.0-2'}} </p>
+</div>
+<div>
+  <h4>Pipes sur les dates</h4>
+    <p>base : {{myDate}}</p>
+    <p>date formatée : {{myDate| date : 'dd-MM-yyyy'}} </p>
+</div>
+<div class="chapter">
+  <h3>Pipe custom</h3>
+  <div>
+    <h4>To Fahrenheit pipe</h4>
+    <p>{{myTempC}} °C => {{myTempC | toFahrenheit}} °F </p>
+    <p>{{myTempC}} °C => {{myTempC | convertTemp: 'f'}} °F </p>
+    <p>{{myTempF}} °F => {{myTempF | convertTemp: 'c'}} °C</p>
+  </div>
+  <div>
+    <button (click)="start()">start</button>
+    <button (click)="stop()">stop</button>
+  </div>
+
+</div>

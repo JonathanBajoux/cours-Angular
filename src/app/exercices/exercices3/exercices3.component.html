@@ -1,0 +1,15 @@
+<h1>Article-list</h1>
+
+<button (click)="basculeAffichage()">
+  {{articlesPublie ? 'Afficher Uniquement les articles publié' : 'Afficher tout les articles'}}
+</button>
+
+<ul>
+  <li *ngFor="let article of articles">
+    <div *ngIf="article.estPublie || articlesPublie">
+      <h2>{{article.titre}}</h2>
+      <p>{{article.description}}</p>
+      <p>Publié : {{article.estPublie ? 'Oui' : 'Non'}}</p>
+    </div>
+  </li>
+</ul>

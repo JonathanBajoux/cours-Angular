@@ -1,0 +1,9 @@
+<h2>Timer</h2>
+<p>{{totalSeconds | convertTime}}</p>
+<div class="chapter">
+
+  <!--<button (click)="start()" [disabled]="timer">start</button>
+  <button (click)="pause()" [disabled]="!timer">pause</button>-->
+  <button (click)="toggle()">Start/stop</button>
+  <button (click)="reset()" [disabled]="timer || totalSeconds === 0">reset</button>
+</div>

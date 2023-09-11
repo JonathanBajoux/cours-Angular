@@ -1,0 +1,23 @@
+<form [formGroup]="ajoutForm" (ngSubmit)="submitForm()">
+  <div>
+    <label for="nom">Nom </label>
+    <input type="text" formControlName="nom" id="nom">
+  </div>
+
+  <div>
+    <label for="description">déscription </label>
+    <input type="text" formControlName="description" id="description">
+    <p *ngIf="ajoutForm.get('description')?.valid">
+      Description ne remplis pas les conditions requises.
+    </p>
+  </div>
+
+  <div>
+    <label for="prix">Prix </label>
+    <input type="number" formControlName="prix" id="prix">
+  </div>
+
+  <div>
+    <button type="submit">Ajouter</button>
+  </div>
+</form>
